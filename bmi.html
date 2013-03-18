@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Graviton - The BMI calculator</title>
+
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="offmu.css" type="text/css" />
+
+<script>
+(function changeMeter() {
+  var myVar=document.getElementById('bmi').value;
+  document.getElementById('meter1').setAttribute('value', myVar);
+  })();
+</script>
+	
+</head>
+
+<body>
+
+<header>
+<p>
+Officina Mutante presents
+<hr />
+
+<h1>Graviton</h1>
+<h2>The awesome BMI* calculator</h2>
+*Body Mass Index
+</header>
+
+<hr />  
+   <form oninput= "bmi.value = 
+   						parseFloat(wi.valueAsNumber / 
+   							((hi.valueAsNumber/100)*
+   								(hi.valueAsNumber/100))).toFixed(1); 
+   					ho.value=hi.valueAsNumber;
+   					wo.value=wi.valueAsNumber;
+   					meter1.value=
+  						parseFloat(wi.valueAsNumber / 
+   							((hi.valueAsNumber/100)*
+   								(hi.valueAsNumber/100))); 
+   					"changeMeter()"; id="theForm"	>
+   	  <p>Insert your values below sliding the cursors
+   	  <p><label for="height">Your Height (Cm): </label>
+	  <input type="range" name="height" id="hi" value = "170" min="100" max="250"> =
+	  <output name="ho" for "hi wi"></output>
+	  <p><label for="weigth">Your Weight (Kg): </label>
+	  <input type="range" name="weight" id="wi" value = "70" min="40" max="150"> =
+	  <output name="wo" for "wi"></output>
+	  <p><label for="bmi" style="font-weight:bold;">Your BMI is 
+	  	<output name="bmi" for "hi wi" id="bmi"></output>
+	  <p><meter form = "theForm" id = "meter1" name="meter1"
+	  		min="6" max="150" low="20" high="30" optimum="25" value ="50">50%</meter>
+	</form>
+
+<hr />
+	
+<footer>
+	<a href="https://sites.google.com/site/officinamutante/">
+		-- by Officina Mutante	
+	   <img src="offMu logoBW.png" alt="Officina Mutante logo" height="65px" width="58px">
+	</a>
+</footer>

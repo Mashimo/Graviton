@@ -1,0 +1,33 @@
+body {
+	background: #F9F9F9; color: #222; 
+	text-align: center;
+  	background-image: url("steampunkhandy.jpg");
+  	background-size:30% 50%;
+  	background-repeat: no-repeat;
+	}
+hr  {
+	width: 60%;
+	align: center;
+	height: 3px;
+	background-color: black;
+	color: black;
+	noshade;
+	}
+header hr {
+	height: 15px;
+	}
+img {
+vertical-align:text-top;
+}
+a:link, a:visited {
+	text-decoration: none;
+	color: #666;
+	}
+a:hover, a:active {
+	text-decoration: underline;
+	color: #666;
+	}
+meter {
+	border: solid #cccccc 3px;
+	border-radius: 5px;
+	}
