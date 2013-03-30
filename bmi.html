@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="offmu.css" type="text/css" />
 
 <script>
-(function changeMeter() {
+function changeMeter() {
   var myVar=document.getElementById('bmi').value;
   document.getElementById('meter1').setAttribute('value', myVar);
-  })();
+}
 </script>
 	
 </head>
@@ -28,20 +28,21 @@ Officina Mutante presents
 </header>
 
 <hr />  
-   <form oninput= "bmi.value = 
-   						parseFloat(wi.valueAsNumber / 
-   							((hi.valueAsNumber/100)*
-   								(hi.valueAsNumber/100))).toFixed(1); 
-   					ho.value=hi.valueAsNumber;
-   					wo.value=wi.valueAsNumber;
-   					meter1.value=
-  						parseFloat(wi.valueAsNumber / 
-   							((hi.valueAsNumber/100)*
-   								(hi.valueAsNumber/100))); 
-   					"changeMeter()"; id="theForm"	>
+   <form name="calc_form" id="theForm" 
+   				// bmi contains the calculated Index; 
+   				// ho and wo are needed to display the changed values of height and weight;
+   				// meter1 is needed to display the changed meter value
+   			oninput= "bmi.value = 
+   						(parseFloat(wi.value) / 
+   							((hi.value/100)*
+   								(hi.value/100))).toFixed(1); 
+   					ho.value=hi.value;
+   					wo.value=wi.value;
+   					meter1.value=bmi.value;
+   					"changeMeter()";>
    	  <p>Insert your values below sliding the cursors
    	  <p><label for="height">Your Height (Cm): </label>
-	  <input type="range" name="height" id="hi" value = "170" min="100" max="250"> =
+	  <input type="range" name="height" id="hi" value = "170" min="100" max="250"> = 
 	  <output name="ho" for "hi wi"></output>
 	  <p><label for="weigth">Your Weight (Kg): </label>
 	  <input type="range" name="weight" id="wi" value = "70" min="40" max="150"> =
