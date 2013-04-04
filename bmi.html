@@ -7,9 +7,24 @@
   <link rel="stylesheet" href="offmu.css" type="text/css" />
 
 <script>
-function changeMeter() {
-  var myVar=document.getElementById('bmi').value;
-  document.getElementById('meter1').setAttribute('value', myVar);
+
+function conclude() {
+  var resultedBMI=document.getElementById('bmi').value;
+  var theOutputBox = document.getElementById('conclusion');
+
+  if (resultedBMI < 16)
+    theOutputBox.innerHTML="Severely underweight";
+  else if (resultedBMI < 20)
+	theOutputBox.innerHTML= "Underweight";
+  else if (resultedBMI < 25)
+	theOutputBox.innerHTML= "Normal";
+  else if (resultedBMI < 30)
+	theOutputBox.innerHTML= "Overweight";
+  else if (resultedBMI < 35)
+	theOutputBox.innerHTML= "Obese";
+  else theOutputBox.innerHTML= "OH NOOOO!!!!";
+
+  return;
 }
 </script>
 	
@@ -39,7 +54,7 @@ Officina Mutante presents
    					ho.value=hi.value;
    					wo.value=wi.value;
    					meter1.value=bmi.value;
-   					"changeMeter()";>
+   					conclude();">
    	  <p>Insert your values below sliding the cursors
    	  <p><label for="height">Your Height (Cm): </label>
 	  <input type="range" name="height" id="hi" value = "170" min="100" max="250"> = 
@@ -51,6 +66,7 @@ Officina Mutante presents
 	  	<output name="bmi" for "hi wi" id="bmi"></output>
 	  <p><meter form = "theForm" id = "meter1" name="meter1"
 	  		min="6" max="150" low="20" high="30" optimum="25" value ="50">50%</meter>
+	  <p><output name="conclusion" for "hi wi" id="conclusion" style="font-weight:bold;"></output>
 	</form>
 
 <hr />
